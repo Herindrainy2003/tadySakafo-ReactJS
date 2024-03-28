@@ -1,14 +1,19 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
-import {useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { getData } from '../../../Redux/Actions';
+
 const SearchRecipes = () => {
+
   const [searchTerm, setSearchTerm] = useState('');
   const dispatch = useDispatch()
+
+  //recuperation et chamngement la valeur de  state
   const handleInputChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
+  //Envoyer nos donnes dans notre reducers(getData) en  utilisant dispatch
   const handleSearch = () => {
     dispatch(getData(searchTerm))
   };
