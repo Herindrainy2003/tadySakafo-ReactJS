@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import { useDispatch } from 'react-redux';
-import { getData } from '../../../Redux/Actions';
+import { getData } from '../../../Redux/Actions/SearchTerm/index';
+import Navbar from './../../Navbar/Navbar';
+import RecipeDetails from './../../Food/component/food';
 
 const SearchRecipes = () => {
 
@@ -16,10 +18,17 @@ const SearchRecipes = () => {
   //Envoyer nos donnes dans notre reducers(getData) en  utilisant dispatch
   const handleSearch = () => {
     dispatch(getData(searchTerm))
+    return(
+      <>
+       <Navbar />
+       <RecipeDetails />
+      </>
+    )
+    
   };
 
   return (
-    <div className="flex items-center rounded-full overflow-hidden">
+    <>
       <input
         type="text"
         placeholder="Rechercher..."
@@ -33,7 +42,7 @@ const SearchRecipes = () => {
       >
         <FiSearch />
       </button>
-    </div>
+    </>
   );
 };
 

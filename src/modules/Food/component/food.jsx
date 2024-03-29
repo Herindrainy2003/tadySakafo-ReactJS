@@ -4,14 +4,14 @@ import DescriptionFood from './description';
 import Ingredient from './Ingredient';
 import Instructions from './Instructions';
 import Youtube from './youtube';
-
+import Acceuil  from "../../Home/component/home"
 
 
 const RecipeDetails = () => {
 
     const recipe = useSelector((state) => state.search.data);
     if (!recipe || !recipe.meals || recipe.meals.length === 0) {
-        return null;
+        return <Acceuil />;
     }
     
 

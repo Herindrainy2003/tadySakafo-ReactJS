@@ -1,7 +1,7 @@
-import { SEARCH_TERM_FAIL, SEARCH_TERM_REQUEST } from "../constants"
+import { SEARCH_TERM_FAIL, SEARCH_TERM_REQUEST } from "../../constants"
 import axios from 'axios'
-import { api } from "../../modules/Search/Api/url";
-import { SEARCH_TERM_SUCCES } from "../Reducers";
+import { api } from "../../../modules/Search/Api/url";
+import { SEARCH_TERM_SUCCES } from "../../Reducers/SearchTerm/index";
 
 export const getData = (url) =>async(dispacth) => {
     try {

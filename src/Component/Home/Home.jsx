@@ -1,11 +1,11 @@
 import RecipeDetails from "../../modules/Food/component/food"
-import SearchRecipes from "../../modules/Search/component/search"
+import Navbar from "../../modules/Navbar/Navbar"
 
 function Home() {
   return (
     <div>
-     <SearchRecipes />
-     <RecipeDetails/>
+     <Navbar />
+     <RecipeDetails />
     </div>
   )
 }
